@@ -1,0 +1,106 @@
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "services": [
+    {
+      "name": "telegram-gift-api",
+      "source": {
+        "root": "telegram-gift-api"
+      },
+      "ports": [
+        {
+          "port": 8000,
+          "protocol": "tcp"
+        }
+      ],
+      "variables": {
+        "API_ID": "35648548",
+        "API_HASH": "7cb954d06d962e181fb1717fe1a486a8",
+        "BOT_TOKEN": "8615958250:AAHlWEzrAPA9ESJXCTA_7QP5eOr0O3HLTqw",
+        "SESSION_DIR": "/app/sessions"
+      },
+      "healthcheck": {
+        "path": "/docs"
+      }
+    },
+    {
+      "name": "tonsend",
+      "source": {
+        "root": "tonsend"
+      },
+      "ports": [
+        {
+          "port": 8001,
+          "protocol": "tcp"
+        }
+      ],
+      "variables": {},
+      "healthcheck": {
+        "path": "/docs"
+      }
+    },
+    {
+      "name": "usdtsend",
+      "source": {
+        "root": "usdtsend"
+      },
+      "ports": [
+        {
+          "port": 8002,
+          "protocol": "tcp"
+        }
+      ],
+      "variables": {},
+      "healthcheck": {
+        "path": "/health"
+      }
+    },
+    {
+      "name": "checkdetails",
+      "source": {
+        "root": "checkdetails"
+      },
+      "ports": [
+        {
+          "port": 8003,
+          "protocol": "tcp"
+        }
+      ],
+      "variables": {},
+      "healthcheck": {
+        "path": "/"
+      }
+    },
+    {
+      "name": "zenwallet",
+      "source": {
+        "root": "zenwallet"
+      },
+      "ports": [
+        {
+          "port": 8004,
+          "protocol": "tcp"
+        }
+      ],
+      "variables": {},
+      "healthcheck": {
+        "path": "/health"
+      }
+    },
+    {
+      "name": "usddtzettonsend",
+      "source": {
+        "root": "usddtzettonsend"
+      },
+      "ports": [
+        {
+          "port": 8005,
+          "protocol": "tcp"
+        }
+      ],
+      "variables": {},
+      "healthcheck": {
+        "path": "/docs"
+      }
+    }
+  ]
+}
